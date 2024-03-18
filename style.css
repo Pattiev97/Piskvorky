@@ -11,12 +11,30 @@ body {
   height: 700px;
   color: #ffffff;
   text-align: center;
-  font-family: serif;
-  font-size: 15px;
+  font-family: sans-serif;
+  font-size: 13px;
 }
 
 .lobster-regular {
   font-family: "Lobster", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-size: 40px;
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 350px;
+  flex-basis: 100%;
+}
+
+.main-paragraph {
+  background-color: #283e50;
+}
+
+p {
+  margin: 25px 15px;
+  line-height: 20px;
 }
