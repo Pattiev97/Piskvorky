@@ -7,8 +7,7 @@
 body {
   background: linear-gradient(#615dad, #ffc8da);
   background-repeat: no-repeat;
-  width: 500px;
-  height: 700px;
+  height: 100vh;
   color: #ffffff;
   text-align: center;
   font-family: sans-serif;
@@ -26,7 +25,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 300px;
-  height: 350px;
   flex-basis: 100%;
 }
 
@@ -37,4 +35,30 @@ body {
 p {
   margin: 25px 15px;
   line-height: 20px;
+}
+
+.button {
+  min-height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.rules {
+  background-color: #1fcca4;
+  border-bottom: 1px solid black;
+}
+
+.rules:hover {
+  background-color: #1cbb96;
+}
+
+.play {
+  background-color: #0197f6;
+}
+
+.play:hover {
+  background-color: #0090e9;
 }
