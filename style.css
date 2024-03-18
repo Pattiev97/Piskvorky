@@ -29,7 +29,6 @@ img {
   display: flex;
   flex-direction: column;
   width: 300px;
-  border-bottom: 1px solid black;
   position: relative;
   left: 50%;
   top: 45%;
