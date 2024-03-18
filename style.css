@@ -1,1 +1,22 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+}
 
+body {
+  background: linear-gradient(#615dad, #ffc8da);
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 700px;
+  color: #ffffff;
+  text-align: center;
+  font-family: serif;
+  font-size: 15px;
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
