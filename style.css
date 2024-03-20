@@ -11,7 +11,7 @@ body {
   color: #ffffff;
   text-align: center;
   font-family: sans-serif;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 .lobster-regular {
@@ -28,7 +28,7 @@ img {
 .container {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  max-width: 350px;
   position: relative;
   left: 50%;
   top: 45%;
@@ -41,16 +41,17 @@ img {
 
 p {
   margin: 25px 15px;
-  line-height: 20px;
+  line-height: 1.5;
 }
 
 .button {
-  min-height: 40px;
+  min-height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: #ffffff;
   text-decoration: none;
+  font-size: 18px;
 }
 
 .rules {
