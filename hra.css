@@ -63,21 +63,21 @@ body {
 }
 
 .buttons__icon--home {
-  background-color: #1ed9aedc;
+  background-color: #1fcca4;
 }
 
 .buttons__icon--home:hover,
 .buttons__icon--home:focus {
-  background-color: #1abb95dc;
+  background-color: #1cbb96;
 }
 
 .buttons__icon--restart {
-  background-color: #468fe2;
+  background-color: #0197f6;
 }
 
 .buttons__icon--restart:hover,
 .buttons__icon--restart:focus {
-  background-color: #4285d1;
+  background-color: #0090e9;
 }
 
 .playground {
