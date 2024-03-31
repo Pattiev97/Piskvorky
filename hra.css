@@ -7,3 +7,33 @@ body {
   font-family: sans-serif;
   font-size: 16px;
 }
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 80vmin;
+  margin-bottom: 50px;
+}
+
+.playground {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #000000;
+  width: 90%;
+}
+
+.square {
+  align-items: center;
+  width: 10%;
+  aspect-ratio: 1/1;
+  background-color: rgb(226, 206, 224);
+}
+
+.square:hover,
+.square:focus {
+  cursor: pointer;
+  background-color: rgb(248, 228, 245);
+}
