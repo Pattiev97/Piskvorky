@@ -91,6 +91,7 @@ body {
   aspect-ratio: 1/1;
   background-color: rgba(213, 182, 210, 0.892);
   border: 1px solid #000000ae;
+  background-size: 1%;
 }
 
 .square:hover,
@@ -99,20 +100,19 @@ body {
   background-color: rgba(248, 226, 245, 0.83);
 }
 
-.board__field--circle {
-  background-image: url("pictures/circle_black.svg");
+.board__field--circle,
+.board__field--cross {
+  background-image: url("./pictures/circle_black.svg");
   background-position: center;
   background-size: 70%;
   background-repeat: no-repeat;
+  transition: background-size 0.15s;
+}
+
+.board__field--circle {
+  background-image: url("./pictures/circle_black.svg");
 }
 
 .board__field--cross {
-  background-image: url("pictures/cross_black.svg");
-  background-position: center;
-  background-size: 70%;
-  background-repeat: no-repeat;
-}
-
-.board__field--circle svg {
-  filter: invert(1);
+  background-image: url("./pictures/cross_black.svg");
 }

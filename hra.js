@@ -5,11 +5,11 @@ const playerTurn = (e) => {
   if (currentPlayer === 'circle') {
     e.target.classList.add('board__field--circle');
     currentPlayer = 'cross';
-    document.querySelector('.current-player').src = 'pictures/cross.svg';
+    document.querySelector('.current-player').src = './pictures/cross.svg';
   } else {
     e.target.classList.add('board__field--cross');
     currentPlayer = 'circle';
-    document.querySelector('.current-player').src = 'pictures/circle.svg';
+    document.querySelector('.current-player').src = './pictures/circle.svg';
   }
 };
 
@@ -45,7 +45,7 @@ document
   .addEventListener('click', playerTurn);
 
 document.querySelector('.restart').addEventListener('click', (e) => {
-  const confirmRestart = confirm('Opravdu chceš restartovat celou hru?');
+  const confirmRestart = confirm('Pozor! Opravdu chceš restartovat celou hru?');
   if (confirmRestart === false) {
     e.preventDefault();
   }
