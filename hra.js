@@ -43,3 +43,10 @@ document
 document
   .querySelector('button:nth-child(10)')
   .addEventListener('click', playerTurn);
+
+document.querySelector('.restart').addEventListener('click', (e) => {
+  const confirmRestart = confirm('Opravdu chceš restartovat celou hru?');
+  if (confirmRestart === false) {
+    e.preventDefault();
+  }
+});
