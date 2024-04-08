@@ -1,7 +1,6 @@
 body {
   background: linear-gradient(#615dad, #ffc8da);
   background-repeat: no-repeat;
-  height: 100vh;
   color: #ffffff;
   text-align: center;
   font-family: sans-serif;
@@ -98,4 +97,22 @@ body {
 .square:focus {
   cursor: pointer;
   background-color: rgba(248, 226, 245, 0.83);
+}
+
+.board__field--circle {
+  background-image: url("pictures/circle_black.svg");
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+.board__field--cross {
+  background-image: url("pictures/cross_black.svg");
+  background-position: center;
+  background-size: 70%;
+  background-repeat: no-repeat;
+}
+
+.board__field--circle svg {
+  filter: invert(1);
 }
