@@ -1,4 +1,6 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 let currentPlayer = 'circle';
+const squares = document.querySelectorAll('.square');
 
 const playerTurn = (e) => {
   e.target.disabled = true;
@@ -11,38 +13,27 @@ const playerTurn = (e) => {
     currentPlayer = 'circle';
     document.querySelector('.current-player').src = './pictures/circle.svg';
   }
+
+  const playground = [...squares].map((item) => {
+    if (item.classList.contains('board__field--circle')) {
+      return 'o';
+    } else if (item.classList.contains('board__field--cross')) {
+      return 'x';
+    } else {
+      return '_';
+    }
+  });
+
+  const winner = findWinner(playground);
+  if (winner === 'o' || winner === 'x') {
+    alert(`Vyhrál hráč se symbolem ${winner}`);
+    location.reload();
+  }
 };
 
-document
-  .querySelector('button:nth-child(1)')
-  .addEventListener('click', playerTurn);
-document
-  .querySelector('button:nth-child(2)')
-  .addEventListener('click', playerTurn);
-document
-  .querySelector('button:nth-child(3)')
-  .addEventListener('click', playerTurn);
-document
-  .querySelector('button:nth-child(4)')
-  .addEventListener('click', playerTurn);
-document
-  .querySelector('button:nth-child(5)')
-  .addEventListener('click', playerTurn);
-document
-  .querySelector('button:nth-child(6)')
-  .addEventListener('click', playerTurn);
-document
-  .querySelector('button:nth-child(7)')
-  .addEventListener('click', playerTurn);
-document
-  .querySelector('button:nth-child(8)')
-  .addEventListener('click', playerTurn);
-document
-  .querySelector('button:nth-child(9)')
-  .addEventListener('click', playerTurn);
-document
-  .querySelector('button:nth-child(10)')
-  .addEventListener('click', playerTurn);
+squares.forEach((square) => {
+  square.addEventListener('click', playerTurn);
+});
 
 document.querySelector('.restart').addEventListener('click', (e) => {
   const confirmRestart = confirm('Pozor! Opravdu chceš restartovat celou hru?');
