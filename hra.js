@@ -24,11 +24,17 @@ const playerTurn = (e) => {
     }
   });
 
-  const winner = findWinner(playground);
-  if (winner === 'o' || winner === 'x') {
-    alert(`Vyhrál hráč se symbolem ${winner}`);
-    location.reload();
-  }
+  const returnWinner = () => {
+    const winner = findWinner(playground);
+    if (winner === 'o' || winner === 'x') {
+      alert(`Vyhrál hráč se symbolem "${winner}".`);
+      location.reload();
+    } else if (winner === 'tie') {
+      alert('Hra skončila nerozhodně.');
+    }
+  };
+
+  setTimeout(returnWinner, 400);
 };
 
 squares.forEach((square) => {
